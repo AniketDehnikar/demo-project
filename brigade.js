@@ -2,7 +2,7 @@ const { events } = require("brigadier");
 const XML = require("xml-simple");
 const { alpineJob } = require("./mylib");
 
-events.on("exec", () => {
+events.on("push", () => {
   XML.parse("<say><to>world</to></say>", (e, say) => {
     console.log(`Saying hello to ${say.to}`);
   })
